@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-30T08:58:07.431Z</updated>
+  <updated>2020-06-07T08:43:24.928Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS 音频转码mp3,wav,amr格式</title>
+    <link href="http://yoursite.com/2020/06/07/2020/06/AudioConvert/"/>
+    <id>http://yoursite.com/2020/06/07/2020/06/AudioConvert/</id>
+    <published>2020-06-07T08:41:00.000Z</published>
+    <updated>2020-06-07T08:43:24.928Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="主体功能：-Swift版本"><a href="#主体功能：-Swift版本" class="headerlink" title="主体功能：(Swift版本)"></a>主体功能：(Swift版本)</h2><h3 id="1、将录制的caf格式音频转码mp3格式"><a href="#1、将录制的caf格式音频转码mp3格式" class="headerlink" title="1、将录制的caf格式音频转码mp3格式"></a>1、将录制的caf格式音频转码mp3格式</h3><h3 id="2、wav格式与amr格式音频相互转码"><a href="#2、wav格式与amr格式音频相互转码" class="headerlink" title="2、wav格式与amr格式音频相互转码"></a>2、wav格式与amr格式音频相互转码</h3><a id="more"></a><p><img src="https://upload-images.jianshu.io/upload_images/6695792-89df03aedb60a15a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Mp3转码"><br><img src="https://upload-images.jianshu.io/upload_images/6695792-0486228cd085084a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Amr与Wav互转"></p><h4 id="申明："><a href="#申明：" class="headerlink" title="申明："></a>申明：</h4><p>核心转码功能非原创，摘录于各大博客平台。如有侵权，请联系删除。</p><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>1、转mp3主要依赖于lame</p><p>2、wav与amr的转码应该注意录音(AVAudioRecorder)的参数设置，否则可能导致转码不成功eg:</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> recordSetting: [<span class="type">String</span>:<span class="type">Any</span>] = [</span><br><span class="line"></span><br><span class="line">            <span class="type">AVSampleRateKey</span>:<span class="type">NSNumber</span>(value:<span class="number">16000</span>),<span class="comment">//采样率</span></span><br><span class="line"></span><br><span class="line">            <span class="type">AVEncoderBitRateKey</span>:<span class="type">NSNumber</span>(value: <span class="number">16000</span>),</span><br><span class="line"></span><br><span class="line">            <span class="type">AVFormatIDKey</span>: <span class="type">NSNumber</span>(value: kAudioFormatLinearPCM),<span class="comment">//音频格式</span></span><br><span class="line"></span><br><span class="line">            <span class="type">AVNumberOfChannelsKey</span>: <span class="type">NSNumber</span>(value: <span class="number">1</span>),<span class="comment">//通道数</span></span><br><span class="line"></span><br><span class="line">            <span class="type">AVLinearPCMBitDepthKey</span>:<span class="type">NSNumber</span>(value: <span class="number">16</span>),</span><br><span class="line"></span><br><span class="line">            <span class="type">AVEncoderAudioQualityKey</span>: <span class="type">NSNumber</span>(value: <span class="type">AVAudioQuality</span>.<span class="built_in">max</span>.rawValue)<span class="comment">//录音质量</span></span><br><span class="line"></span><br><span class="line">        ];</span><br></pre></td></tr></table></figure><p>项目地址 <a href="https://github.com/SingletonH/SwiftRecorder" target="_blank" rel="noopener">https://github.com/SingletonH/SwiftRecorder</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;主体功能：-Swift版本&quot;&gt;&lt;a href=&quot;#主体功能：-Swift版本&quot; class=&quot;headerlink&quot; title=&quot;主体功能：(Swift版本)&quot;&gt;&lt;/a&gt;主体功能：(Swift版本)&lt;/h2&gt;&lt;h3 id=&quot;1、将录制的caf格式音频转码mp3格式&quot;&gt;&lt;a href=&quot;#1、将录制的caf格式音频转码mp3格式&quot; class=&quot;headerlink&quot; title=&quot;1、将录制的caf格式音频转码mp3格式&quot;&gt;&lt;/a&gt;1、将录制的caf格式音频转码mp3格式&lt;/h3&gt;&lt;h3 id=&quot;2、wav格式与amr格式音频相互转码&quot;&gt;&lt;a href=&quot;#2、wav格式与amr格式音频相互转码&quot; class=&quot;headerlink&quot; title=&quot;2、wav格式与amr格式音频相互转码&quot;&gt;&lt;/a&gt;2、wav格式与amr格式音频相互转码&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="Swift" scheme="http://yoursite.com/tags/Swift/"/>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="音频" scheme="http://yoursite.com/tags/%E9%9F%B3%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Swift 定位权限封装，坐标转换</title>
